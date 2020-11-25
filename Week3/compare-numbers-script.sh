@@ -1,5 +1,5 @@
 #! /bin/bash
-#A simple script that will two numbers and compare them.
+#A simple script that will take two numbers and compare them.
 
 read x 
 read y
