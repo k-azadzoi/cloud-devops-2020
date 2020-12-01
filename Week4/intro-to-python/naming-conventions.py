@@ -1,7 +1,7 @@
 # Different naming conventions used in Python
 
 def thisIsCamelCasing():
-    x = "Hello World"
+    x = "Hello Wario"
     print(x)
 
 
@@ -15,3 +15,5 @@ def this_is_snake_case():
 
 # When run it will print out Hello World
 thisIsCamelCasing()
+
+
