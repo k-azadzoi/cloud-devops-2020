@@ -1,5 +1,8 @@
 # Examples of defining functions in python
 
+# What are functions?
+# Functions are a collection of instructions
+
 def nullary_function():  # nullary means that the function takes no arguments
     print("Hi Friends")
 
@@ -18,8 +21,11 @@ def get_user_info():
     print(user_info)
 
 
-def parameter_function(some_person_name):
-    print("Greetings " + some_person_name)
+def parameter_function(first_person_name, second_person_name):
+    print("Greetings " + first_person_name + " and " + second_person_name)
+
+
+parameter_function("Spike", "Faye")
 
 
 def add(x, y):
@@ -28,4 +34,3 @@ def add(x, y):
 
 
 print(add(5, 10))
-
