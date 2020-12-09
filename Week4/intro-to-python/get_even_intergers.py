@@ -17,4 +17,6 @@ def get_even_integers(start, n):
     return even_integer_list  # make sure to return
 
 
-print(get_even_intergers(1, 10))
+print(get_even_integers(2, 10))
+
+
