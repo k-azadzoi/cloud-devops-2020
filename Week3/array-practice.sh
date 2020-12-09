@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 #creating a new array
 arr=("ken" "joe" "dan")
