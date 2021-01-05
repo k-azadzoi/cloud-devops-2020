@@ -5,5 +5,6 @@ def split_and_join(str):
     joined_str = "-".join(split_str)    # This will join the hyphen to each space in the split_str
     return joined_str
 
+
 print(split_and_join("The quick and brown fox jumped over the bridge"))
 
