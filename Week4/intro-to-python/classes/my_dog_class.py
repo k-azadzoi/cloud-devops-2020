@@ -1,4 +1,6 @@
 # A simple example of a class in python using instance methods.
+from datetime import date
+
 
 class Dog:
     # using instance attributes to define the dog class
@@ -27,11 +29,24 @@ class Dog:
         self.is_asleep = False
         return 'It is ' + str(self.is_asleep) + '. ' + self.name + ' is waking up!'
 
+    @classmethod
+    def from_birth_year(cls, breed, name, birth_year, color, is_asleep):
+        today = date.today().year
+        age = today - birth_year
+        return cls(breed, name, age, color, is_asleep)
 
-dog_one = Dog("Welsh Corgi", "Cyrus", "2", "brown", is_asleep=False)
-dog_two = Dog("Golden Retriever", "Jordan", "4", "black", is_asleep=False)
+
+dog_one = Dog("Welsh Corgi", "Cyrus", "13", "brown", is_asleep=False)
+dog_two = Dog("Golden Retriever", "Jordan", "5", "black", is_asleep=False)
 
 print(dog_one.walk())
 print(dog_two.eat())
 print(dog_two.sleep())
 print(dog_one.wake_up(), dog_one.eat())
+
+dog_three = Dog.from_birth_year("Bulldog", "Cam", 2018, "dark brown", is_asleep=False)
+print(dog_three.age)
+
+
+
+
