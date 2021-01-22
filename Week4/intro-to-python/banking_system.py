@@ -17,6 +17,10 @@ class Bank:
     def check_location(self):
         print("The current branch is " + self.branch_location)
 
+    def change_location(self, loc):
+        print("The current branch is " + self.branch_location + ". " + "The new location is " + loc)
+        self.branch_location = loc
+
 
 b = Bank.bank_name
 print(b)  # Output: "Bank of America"
@@ -24,3 +28,9 @@ Bank.change_bank('Salem Five')  # Output: "The bank name is: Salem Five"
 
 s = Bank("Boston")
 s.check_location()  # Output: "The current branch is Boston"
+
+s.change_location("Salem")  # Output: "The current branch is Boston. The new location is Salem"
+print(s.branch_location)    # Output: "Salem"
+
+
+
