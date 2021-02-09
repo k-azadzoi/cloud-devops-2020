@@ -16,7 +16,7 @@
 
 #### Server
 
-- A Cookbook is a collection of recipes 
+- A Cookbook (a collection of recipes) is located on the server.  
 
 #### Node
 
@@ -36,5 +36,17 @@ This is a resource for documenting my experience installing Chef Infra Server an
 
 
 ## Environment Setup 
+2 VMs both running Kali Linux
+
+`kali-chef-server`
+
+### Ubuntu Setup for Chef Infra Server
+
+1. Download the package for Ubuntu `wget https://packages.chef.io/files/stable/chef-server/14.0.65/ubuntu/20.04/chef-server-core_14.0.65-1_amd64.deb` and then `sudo dpkg -i /tmp/chef-server-core_14.0.65-1_amd64.deb`
+2. After a few minutes run `sudo chef-server-ctl reconfigure`
 
 
+
+`kali-chef-client` 
+
+- Chef Workstation
