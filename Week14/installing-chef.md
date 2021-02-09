@@ -33,6 +33,7 @@ This is a resource for documenting my experience installing Chef Infra Server an
 - [Install Work Station](https://docs.chef.io/workstation/install_workstation/)
 
 - [Additional Resource for Installation](https://www.linode.com/docs/guides/install-a-chef-server-workstation-on-ubuntu-18-04/#install-the-chef-server)
+- [Video Instructions](https://www.youtube.com/watch?v=gOw2Ot2uB1Q&ab_channel=HowToMakeTechWork)
 
 
 ## Environment Setup 
@@ -44,6 +45,8 @@ This is a resource for documenting my experience installing Chef Infra Server an
 
 1. Download the package for Ubuntu `wget https://packages.chef.io/files/stable/chef-server/14.0.65/ubuntu/20.04/chef-server-core_14.0.65-1_amd64.deb` and then `sudo dpkg -i /tmp/chef-server-core_14.0.65-1_amd64.deb`
 2. After a few minutes run `sudo chef-server-ctl reconfigure`
+3. Make a new directory by running `mkdir ~/.chef`
+4. Run the following command to create an administrator `sudo chef-server-ctl user-create USER_NAME FIRST_NAME LAST_NAME EMAIL 'PASSWORD' --filename FILE_NAME` **Example**:  
 
 
 
