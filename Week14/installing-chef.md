@@ -37,19 +37,19 @@ This is a resource for documenting my experience installing Chef Infra Server an
 
 
 ## Environment Setup 
-2 VMs both running Kali Linux
-
+2 VirtualBox VMs running Kali Linux
 
 ### Ubuntu Setup for Chef Infra Server
 `chef-infra-server`
 
-1. Download the package for Ubuntu `wget https://packages.chef.io/files/stable/chef-server/14.0.65/ubuntu/20.04/chef-server-core_14.0.65-1_amd64.deb` and then `sudo dpkg -i /tmp/chef-server-core_14.0.65-1_amd64.deb`
-2. After a few minutes run `sudo chef-server-ctl reconfigure`
-3. Make a new directory by running `mkdir ~/.chef`
-4. Run the following command to create an administrator: `sudo chef-server-ctl user-create USER_NAME FIRST_NAME LAST_NAME EMAIL 'PASSWORD' --filename FILE_NAME` <br>**Example**: `sudo chef-server-ctl user-create akira Akira C akirac@gmail.com 'password1' --filename ~/.chef/akira.pem` 
-5. Run the following command to create an organization: `sudo chef-server-ctl org-create short_name 'full_organization_name' --association_user user_name --filename ORGANIZATION-validator.pem` **Example**: `sudo chef-server-ctl org-create fivehead 'Five Head, Inc.' --association_user akira --filename ~/.chef/fivehead.pem`
-6. Make sure `openssh-server` is installed by running `sudo apt-get install openssh-server`
-7. Start the ssh server by running `sudo systemctl start ssh` and then run `sudo systemctl status ssh` If it is active 
+1. Download the package for Ubuntu: `wget https://packages.chef.io/files/stable/chef-server/14.0.65/ubuntu/20.04/chef-server-core_14.0.65-1_amd64.deb`
+2. Make a new directory by running `mkdir ~/.chef`and cd into that directory.
+3. As a root user install the package on the server with the command `sudo dpkg -i chef-server-core_14.0.65-1_amd64.deb`
+4. After a few minutes run `sudo chef-server-ctl reconfigure`
+5. Run the following command to create an administrator: `sudo chef-server-ctl user-create USER_NAME FIRST_NAME LAST_NAME EMAIL 'PASSWORD' --filename FILE_NAME` <br>**Example**: `sudo chef-server-ctl user-create akira Akira C akirac@gmail.com 'password1' --filename ~/.chef/akira.pem` 
+6. Run the following command to create an organization: `sudo chef-server-ctl org-create short_name 'full_organization_name' --association_user user_name --filename ORGANIZATION-validator.pem` **Example**: `sudo chef-server-ctl org-create fivehead 'Five Head, Inc.' --association_user akira --filename ~/.chef/fivehead-validator.pem`
+7. Make sure `openssh-server` is installed by running `sudo apt-get install openssh-server`
+8. Start the ssh server by running `sudo systemctl start ssh` and then run `sudo systemctl status ssh` If it is active 
 
 ### Ubuntu Setup for Chef Workstation
 `chef-infra-client` 
